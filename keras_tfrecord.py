@@ -266,8 +266,8 @@ def fit_tfrecord(train_model, nb_train_sample, batch_size, nb_epoch=10, verbose=
 
     callback_model = train_model
 
-    callbacks._set_model(callback_model)
-    callbacks._set_params({
+    callbacks.set_model(callback_model)
+    callbacks.set_params({
         'batch_size': batch_size,
         'nb_epoch': nb_epoch,
         'nb_sample': nb_train_sample,
